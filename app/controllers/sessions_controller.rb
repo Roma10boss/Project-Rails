@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   
     def destroy
       session.clear
-      flash[:success] = "You have logged out"
+      flash[:success] = "You have been logged out"
       redirect_to '/'
     end
   
@@ -34,6 +34,9 @@ class SessionsController < ApplicationController
         flash[:success] = "Welcome back #{@user.name}!"
         redirect_to user_path(@user)
     end
+    
+  
+  
   
     def home
       redirect_to meal_plans_path if logged_in?

@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exeption
-    include ApplicationHelper
+  protect_from_forgery with: :exception
+  include ApplicationHelper
 
-    private
+private
 
   def redirect_if_not_logged_in
     if !logged_in?
